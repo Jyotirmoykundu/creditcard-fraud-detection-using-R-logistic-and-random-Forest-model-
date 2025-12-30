@@ -64,3 +64,4 @@ print(fraud_capture_rate)
 # Final AUC
 cat("Logistic Regression AUC:", auc(roc_curve), "\n")
 
+
