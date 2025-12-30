@@ -1,1 +1,15 @@
-Tools: R, ggplot2, caret, logistic regression, ROC, AUC. Loaded and cleaned transaction data, converting the target variable (Class) into a factor (Legit/Fraud) and applied exploratory data analysis to visualize the distribution of transaction amounts for fraud vs. legitimate transactions. Split data into 80% training and 20% test sets stratified by Class and assigned higher weight (100x) to fraud cases to handle imbalance. Trained a logistic regression model using key PCA-derived features (V1, V2, V3) and transaction amount. Interpreted coefficients. Used precision-recall trade-offs (confusion matrix) and AUC-ROC (0.929 score),AUC-ROC: 0.929, indicating excellent model performance. Optimized the threshold to capture 92% of frauds while keeping precision at 35%. Visualized transaction patterns and prediction performance using advanced ggplot2 and ROC plots. threshold tuning can be applied according to the business needs. applied random forest method for comparing and both the logit and rf model perfomes excellently very well with rf model having AUC(0.957) slighlty better than logit model AUC(0.951). we pick Random Forest if we need the highest possible detection rate (even slight improvements matter). we choose logistic model if we need to explain decisions.
+This project builds and compares Logistic Regression and Random Forest models to detect fraudulent credit card transactions in a highly imbalanced dataset. Since fraud represents only ~0.17% of transactions, traditional accuracy is misleading; hence, evaluation focuses on ROC–AUC, Recall, Precision, Balanced Accuracy, and threshold optimization. 
+Libraries: caret, ggplot2, pROC, randomForest, dplyr.
+Models: Logistic Regression, Random Forest.
+Metrics: Confusion Matrix, ROC–AUC, Recall, Precision, F1, Balanced Accuracy.
+### Data Preparation & EDA
+Cleaned transaction data and converted target variable to factor (Legit, Fraud).Performed EDA to compare transaction patterns between fraud and legitimate cases.Conducted an 80–20 stratified train–test split.Addressed class imbalance using higher fraud class weights (100×).
+### Logistic Regression
+Trained a weighted logistic model using key PCA features (V1, V2, V3) and transaction amount.Optimized classification threshold (0.248) to improve fraud capture.
+### Performance:
+AUC–ROC: 0.929    Recall: 80.6%    Precision: 3.65%    Balanced Accuracy: 88.5%
+### Random Forest
+Implemented a Random Forest to capture non-linear patterns and feature interactions.Tuned probability threshold (0.296) for fraud detection.
+### Performance:
+AUC–ROC: 0.956    Recall: 84.7%     Precision: 5.20%      Balanced Accuracy: 91.0%
+Random Forest emerges as the preferred model, while Logistic Regression remains a strong, interpretable benchmark.
