@@ -1,7 +1,7 @@
 This project builds and compares Logistic Regression and Random Forest models to detect fraudulent credit card transactions in a highly imbalanced dataset. Since fraud represents only ~0.17% of transactions, traditional accuracy is misleading; hence, evaluation focuses on ROC–AUC, Recall, Precision, Balanced Accuracy, and threshold optimization. 
-Libraries: caret, ggplot2, pROC, randomForest, dplyr.
-Models: Logistic Regression, Random Forest.
-Metrics: Confusion Matrix, ROC–AUC, Recall, Precision, F1, Balanced Accuracy.
+### Libraries: tidyverse,caret, ggplot2, pROC,ranger
+### Models: Logistic Regression, Random Forest.
+### Metrics: Confusion Matrix, ROC–AUC, Recall, Precision, F1, Balanced Accuracy.
 ### Data Preparation & EDA
 Cleaned transaction data and converted target variable to factor (Legit, Fraud).Performed EDA to compare transaction patterns between fraud and legitimate cases.Conducted an 80–20 stratified train–test split.Addressed class imbalance using higher fraud class weights (100×).
 ### Logistic Regression
