@@ -7,10 +7,10 @@ Cleaned transaction data and converted target variable to factor (Legit, Fraud).
 ### Logistic Regression
 Trained a weighted logistic model using key PCA features (V1, V2, V3) and transaction amount.Optimized classification threshold (0.248) to improve fraud capture.
 ### Performance:
-AUC–ROC: 0.929    Recall: 80.6%    Precision: 3.65%    Balanced Accuracy: 88.5%
+AUC–ROC: 0.929    Recall: 80.6%    Precision: 70 %   
 ### Random Forest
 Implemented a Random Forest to capture non-linear patterns and feature interactions.Tuned probability threshold (0.296) for fraud detection.
 ### Performance:
-AUC–ROC: 0.956    Recall: 84.7%     Precision: 5.20%      Balanced Accuracy: 91.0%
+AUC–ROC: 0.956    Recall: 84.7%     Precision: 77.80%      
 ### Conclusion
 Random Forest emerges as the preferred model, while Logistic Regression remains a strong, interpretable benchmark.
