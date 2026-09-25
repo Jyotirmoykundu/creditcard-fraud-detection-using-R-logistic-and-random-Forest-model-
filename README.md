@@ -11,7 +11,7 @@ AUC–ROC: 0.929    Recall: 65.6%    Precision: 85 %
 ### Random Forest
 Implemented a Random Forest to capture non-linear patterns and feature interactions,with threshld 0.4.
 ### Performance:
-AUC–ROC: 0.956    Recall: 63.4%    Precision: 94%     
+AUC–ROC: 0.956    Recall: 70.4%    Precision: 91%     
 
 ### Conclusion
 Random Forest emerges as the preferred model, while Logistic Regression remains a strong, interpretable benchmark.
